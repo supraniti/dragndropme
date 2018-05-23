@@ -1,15 +1,16 @@
 
-function fetchUI(){
+function fetchUI(UI){
   fetch('/UI-Templates/controllers.html')
   .then(function (response) {
     return response.text();
   })
   .then(function (html) {
-    return document.createRange().createContextualFragment(html);
+    UI = document.createRange().createContextualFragment(html);
+    console.log(UI);
   });
-  return false;
 }
 let test = document.getElementById('testUI');
+let UI = {};
 test.onclick = function(){
-  console.log( fetchUI() );
+  fetchUI(UI);
 }
