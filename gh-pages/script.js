@@ -13,5 +13,5 @@ function fetchUI(){
 }
 let test = document.getElementById('testUI');
 test.onclick = function(){
-  console.log( fetchUI() );
+  console.log( fetchUI().children );
 }
